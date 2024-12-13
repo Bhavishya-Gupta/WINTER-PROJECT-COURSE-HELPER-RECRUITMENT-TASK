@@ -1,0 +1,295 @@
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff); /*Soft cyan and white gradient*/
+  /*background: linear-gradient(to bottom, #87ceeb, #ffffff); /*Sky blue to white */
+  /*background: linear-gradient(to bottom, #e6e6fa, #ffffff); /* Pastel purple to white */
+  color: #333; /* Keep text readable */
+  /*color: #001f3f; /* Navy text */
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  /* Alternate options:
+  /*background: #00796b;  Teal background */
+  /*background: #001f3f; /* Navy background */
+  /*background: #36454f; /* Charcoal gray */ 
+  background: #556b2f; /* Olive green */
+  color: #ffffff; /* White text */
+  /*color: #001f3f;*/
+  /*color: #36454f; /* Charcoal gray */
+
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Main Section Styling */
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.countdown-section, .profile-section {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff; /* White background */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: slideIn 1s ease-out;
+}
+
+/* Countdown Section */
+.countdown h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  /*color: #00796b; Teal text */
+  color: #001f3f; /* Navy text */
+  /* Alternate options:
+  color: #556b2f; /* Olive green 
+  color: #36454f; /* Charcoal gray */
+}
+
+#countdown-timer {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+ /* color: #333; /* Darker text */
+  color: #001f3f; /* Navy text */
+  animation: pulse 2s infinite;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 1rem;
+  margin: 5px;
+  /* Alternate options:
+  background: #ff7f50; /* Coral */
+  background: #00796b; /* Teal background */
+  /*background: #ffcc00; /* Mustard yellow */
+  color: white; /* White text */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  animation: bounceIn 1.5s;
+}
+
+button:hover {
+  text-align: center;
+  /* Alternate options:
+  background: #004d40; /* Darker teal */
+  background: #e57347; /* Darker coral 
+  background: #cc9900; /* Darker mustard yellow 
+  background: #e8c5aa; /* Darker peach */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profile-picture img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /*border: 4px solid #ffcc00; /* Mustard yellow */
+  /* Alternate options:
+  border: 4px solid #ff7f50; /* Coral */
+  border: 4px solid #ffdab9; /* Peach */
+  display: block;
+  margin: 0 auto 20px;
+  animation: zoomIn 1s ease;
+}
+
+.about {
+  text-align: left;
+  font-size: 1.1rem;
+  /*color: #555; /* Soft gray text */
+  color: #001f3f; /* Navy text */
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 1rem;
+  /*color: #00796b; Teal text */
+  /*color: #001f3f; /* Navy text */
+  /* Alternate options:
+  color: #36454f; /* Charcoal gray */
+  color: #556b2f; /* Olive green */
+
+  /*background: #f5f5dc;  /*Light beige */
+  /* Alternate options:*/
+  background: #e6e6fa; /* Pastel purple */
+  /*background: #87ceeb; /* Sky blue */
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-in;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; /* Smaller header font for mobile */
+  }
+
+  .countdown h2 {
+    font-size: 1.5rem; /* Adjusted font size for mobile */
+  }
+
+  #countdown-timer {
+    font-size: 2.5rem; /* Adjusted font size for mobile */
+  }
+
+  .buttons button {
+    font-size: 0.9rem; /* Smaller buttons on mobile */
+    padding: 10px 20px;
+  }
+
+  .profile-picture img {
+    width: 120px; /* Smaller profile picture on mobile */
+    height: 120px;
+  }
+
+  .about {
+    font-size: 1rem; /* Adjusted font size for mobile */
+    text-align: center; /* Center the text on mobile */
+  }
+
+  main {
+    flex-direction: column; /* Stack the sections vertically on mobile */
+  }
+
+  .countdown-section, .profile-section {
+    width: 100%; /* Full width for both sections */
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.9rem; /* Smaller footer font size */
+  }
+}
+
+/* Media Queries for Smaller Mobile Devices */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Even smaller header font for very small screens */
+  }
+
+  .countdown h2 {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  #countdown-timer {
+    font-size: 2rem; /* Adjusted font size */
+  }
+
+  .buttons button {
+    font-size: 0.8rem; /* Smaller buttons on very small screens */
+    padding: 8px 16px;
+  }
+
+  .profile-picture img {
+    width: 100px; /* Even smaller profile picture */
+    height: 100px;
+  }
+
+  .about {
+    font-size: 0.9rem; /* Smaller text for mobile */
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.8rem; /* Even smaller footer font size */
+  }
+}
